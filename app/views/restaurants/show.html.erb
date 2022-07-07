@@ -2,3 +2,8 @@
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
+
+<div><% @restaurant.reviews.each do |review| %>
+  <li><%= review.content %> <%= review.rating %></li>
+  <% end %>
+</div>
